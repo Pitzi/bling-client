@@ -1,17 +1,11 @@
 # create support methods
 
-class Object
-  def blank?
-    respond_to?(:empty) ? empty? : !self
+module Support
+  def blank?(obj)
+    obj.respond_to?(:empty) ? obj.empty? : !obj
   end
 
-  def present?
-    !blank?
-  end
-
-  def in?(arr)
-    arr.include?(self)
-  rescue NoMethodError
-    raise ArgumentError.new("The parameter passed to #in? must respond to #include?")
+  def present?(obj)
+    !blank?(obj)
   end
 end

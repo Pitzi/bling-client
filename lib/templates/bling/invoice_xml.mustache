@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedido>
+    <nat_operacao>{{nat_operacao}}</nat_operacao>
+    <tipo>{{tipo}}</tipo>
+    <loja>{{loja}}</loja>
+    <cliente>
+        <nome>{{name}}</nome>
+        <tipoPessoa>{{tipoPessoa}}</tipoPessoa>
+        <cpf_cnpj>{{cpf_cnpj}}</cpf_cnpj>
+        {{#ie_rg}}
+        <ie_rg>{{ie_rg}}</ie_rg>
+        {{/ie_rg}}
+        <endereco>{{endereco}}</endereco>
+        <numero>{{numero}}</numero>
+        <complemento>{{complemento}}</complemento>
+        <bairro>{{bairro}}</bairro>
+        <cep>{{cep}}</cep>
+        <cidade>{{cidade}}</cidade>
+        <uf>{{uf}}</uf>
+        <fone>{{fone}}</fone>
+        <email>{{email}}</email>
+    </cliente>
+{{& render_transporte }}
+    <itens>
+      {{& render_items }}
+    </itens>
+    <parcelas>
+    </parcelas>
+    <nf_produtor_rural_referenciada>
+    </nf_produtor_rural_referenciada>
+    <vlr_frete></vlr_frete>
+    <vlr_seguro></vlr_seguro>
+    <vlr_despesas></vlr_despesas>
+    <vlr_desconto></vlr_desconto>
+    <obs>{{obs}}</obs>
+    <numero_loja>{{numero_loja}}</numero_loja>
+</pedido>
