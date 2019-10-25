@@ -41,13 +41,6 @@ module Bling
     end
   end
 end
-
-
-
-Bling.configure do |bling|
-  bling.environment = "development"
-
-end
 require "support"
 require "bling/version"
 require "bling/v2/invoice"
@@ -55,7 +48,7 @@ require "bling/v2/fail_result"
 require "bling/v2/success_result"
 require "bling/v2/response_handler"
 require "bling/v2/fail_result"
-require "bling/development_rest_client_adapter"
+require "bling/rest_client_adapter"
 require "bling/development_rest_client_adapter"
 require "bling/models/transporte_xml"
 require "bling/models/item_xml"

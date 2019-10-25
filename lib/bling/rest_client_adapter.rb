@@ -1,6 +1,5 @@
 module Bling
   class RestClientAdapter
-    extend Loggable
 
     def self.http_get url, headers = {}
       log "RestClientAdapter::http_get url: #{url} headers: #{headers}"
